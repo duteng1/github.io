@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>现代数字美术馆</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="art-nav">
+        <div class="nav-brand">DIGITAL ART</div>
+        <ul class="nav-menu">
+            <li><a href="#home">首页</a></li>
+            <li><a href="#gallery">展览</a></li>
+            <li><a href="#about">关于</a></li>
+            <li><button class="upload-btn"><i class="fas fa-cloud-upload-alt"></i> 上传作品</button></li>
+        </ul>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- 首页大图 -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>数字艺术新视界</h1>
+            <p>探索未来艺术表达形式</p>
+        </div>
+    </section>
+
+    <!-- 作品展示区 -->
+    <main class="gallery-container" id="gallery">
+        <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="painting">绘画</button>
+            <button class="filter-btn" data-filter="digital">数字艺术</button>
+            <button class="filter-btn" data-filter="sculpture">雕塑</button>
+        </div>
+
+        <div class="art-grid" id="artGrid"></div>
+    </main>
+
+    <!-- 灯箱大图查看 -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-img" alt="大图查看">
+    </div>
+
+    <!-- 上传模态框 -->
+    <div class="upload-modal" id="uploadModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>上传你的作品</h2>
+            <div class="upload-area">
+                <input type="file" id="artUpload" accept="image/*" multiple hidden>
+                <label for="artUpload" class="upload-label">
+                    <i class="fas fa-file-upload"></i>
+                    <p>点击选择文件或拖拽到此处</p>
+                </label>
+                <button class="confirm-upload">发布作品</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
